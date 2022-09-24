@@ -20,3 +20,9 @@ data("penguins", package = "palmerpenguins")
 skimr::skim(penguins)
 ```
 
+## calculate the size
+```{r}
+nrow(penguins)
+ncol(penguins)
+```
+
