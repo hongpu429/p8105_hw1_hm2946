@@ -10,26 +10,33 @@ library(tidyverse)
 library(ggplot2)
 ```
 
+
 ## load the dataset
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
+
 
 ## describe the dataset
 ```{r}
 skimr::skim(penguins)
 ```
 
+
 ## calculate the size
 ```{r}
 nrow(penguins)
 ncol(penguins)
 ```
+## there are 344 rows and 8 columns
+
 
 ## calculate the mean
 ```{r}
 mean(penguins$flipper_length_mm,na.rm = TRUE)
 ```
+## the mean is 200.9152
+
 
 ## make the scatterplot
 ```{r}
@@ -37,6 +44,7 @@ flipper_vs_bill =
   ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm,color = species)) + geom_point()
 flipper_vs_bill
 ```
+
 
 ## save the plot
 ```{r}
