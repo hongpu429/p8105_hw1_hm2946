@@ -38,4 +38,8 @@ flipper_vs_bill =
 flipper_vs_bill
 ```
 
+## save the plot
+```{r}
+ggsave("P1_plot.pdf",flipper_vs_bill)
+```
 
