@@ -1,0 +1,12 @@
+---
+title: "p8105_hw1_hm2946.Rmd"
+author: "min"
+date: "2022-09-24"
+output: html_document
+---
+
+## load the dataset
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
