@@ -4,9 +4,19 @@ author: "min"
 date: "2022-09-24"
 output: html_document
 ---
+## preparation
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
 
 ## load the dataset
 ```{r}
 data("penguins", package = "palmerpenguins")
+```
+
+## describe the dataset
+```{r}
+skimr::skim(penguins)
 ```
 
