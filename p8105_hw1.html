@@ -609,6 +609,33 @@ flipper_vs_bill</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 </div>
+<div id="p2" class="section level2">
+<h2>P2</h2>
+</div>
+<div id="construct-the-dataframe" class="section level2">
+<h2>construct the dataframe</h2>
+<pre class="r"><code>library(dplyr)
+df = tibble(
+  sample = rnorm(10),
+  sample &gt; 0,
+  &quot;abcdefghij&quot;,
+  factor(c(&quot;good&quot;,&quot;good&quot;,&quot;good&quot;,&quot;normal&quot;,&quot;normal&quot;,&quot;normal&quot;,&quot;normal&quot;,&quot;bad&quot;,&quot;bad&quot;,&quot;bad&quot;))
+)
+df</code></pre>
+<pre><code>## # A tibble: 10 × 4
+##     sample `sample &gt; 0` `&quot;abcdefghij&quot;` `factor(...)`
+##      &lt;dbl&gt; &lt;lgl&gt;        &lt;chr&gt;          &lt;fct&gt;        
+##  1  0.526  TRUE         abcdefghij     good         
+##  2 -0.745  FALSE        abcdefghij     good         
+##  3  0.0101 TRUE         abcdefghij     good         
+##  4 -0.464  FALSE        abcdefghij     normal       
+##  5  1.22   TRUE         abcdefghij     normal       
+##  6 -0.825  FALSE        abcdefghij     normal       
+##  7  0.136  TRUE         abcdefghij     normal       
+##  8 -0.491  FALSE        abcdefghij     bad          
+##  9 -0.510  FALSE        abcdefghij     bad          
+## 10 -0.438  FALSE        abcdefghij     bad</code></pre>
+</div>
 
 
 

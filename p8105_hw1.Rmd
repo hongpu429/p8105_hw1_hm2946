@@ -51,3 +51,16 @@ flipper_vs_bill
 ggsave("P1_plot.pdf",flipper_vs_bill)
 ```
 
+## P2
+## construct the dataframe
+```{r}
+library(dplyr)
+df = tibble(
+  sample = rnorm(10),
+  sample > 0,
+  "abcdefghij",
+  factor(c("good","good","good","normal","normal","normal","normal","bad","bad","bad"))
+)
+df
+```
+
