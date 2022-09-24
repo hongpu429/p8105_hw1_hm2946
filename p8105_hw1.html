@@ -623,18 +623,18 @@ df = tibble(
 )
 df</code></pre>
 <pre><code>## # A tibble: 10 × 4
-##     sample `sample &gt; 0` `&quot;abcdefghij&quot;` `factor(...)`
-##      &lt;dbl&gt; &lt;lgl&gt;        &lt;chr&gt;          &lt;fct&gt;        
-##  1 -1.27   FALSE        abcdefghij     good         
-##  2 -0.679  FALSE        abcdefghij     good         
-##  3 -1.75   FALSE        abcdefghij     good         
-##  4  0.949  TRUE         abcdefghij     normal       
-##  5 -0.515  FALSE        abcdefghij     normal       
-##  6 -0.878  FALSE        abcdefghij     normal       
-##  7 -0.905  FALSE        abcdefghij     normal       
-##  8  1.79   TRUE         abcdefghij     bad          
-##  9 -0.825  FALSE        abcdefghij     bad          
-## 10 -0.0218 FALSE        abcdefghij     bad</code></pre>
+##    sample `sample &gt; 0` `&quot;abcdefghij&quot;` `factor(...)`
+##     &lt;dbl&gt; &lt;lgl&gt;        &lt;chr&gt;          &lt;fct&gt;        
+##  1 -0.820 FALSE        abcdefghij     good         
+##  2  1.56  TRUE         abcdefghij     good         
+##  3  1.04  TRUE         abcdefghij     good         
+##  4 -1.75  FALSE        abcdefghij     normal       
+##  5 -0.535 FALSE        abcdefghij     normal       
+##  6 -0.294 FALSE        abcdefghij     normal       
+##  7  1.17  TRUE         abcdefghij     normal       
+##  8  1.08  TRUE         abcdefghij     bad          
+##  9 -0.188 FALSE        abcdefghij     bad          
+## 10  0.829 TRUE         abcdefghij     bad</code></pre>
 </div>
 <div id="calculate-the-mean-1" class="section level2">
 <h2>calculate the mean</h2>
@@ -643,9 +643,9 @@ log = pull(df,2)
 cha = pull(df,3)
 fac = pull(df,4)
 mean(num)</code></pre>
-<pre><code>## [1] -0.4101391</code></pre>
+<pre><code>## [1] 0.2097314</code></pre>
 <pre class="r"><code>mean(log)</code></pre>
-<pre><code>## [1] 0.2</code></pre>
+<pre><code>## [1] 0.5</code></pre>
 <pre class="r"><code>mean(cha)</code></pre>
 <pre><code>## Warning in mean.default(cha): 参数不是数值也不是逻辑值：回覆NA</code></pre>
 <pre><code>## [1] NA</code></pre>
@@ -656,6 +656,17 @@ mean(num)</code></pre>
 <div id="mean-works-for-numeric-and-logic-variables-but-not-for-character-and-factor-variables" class="section level2">
 <h2>mean works for numeric and logic variables, but not for character
 and factor variables</h2>
+</div>
+<div id="convert-variables" class="section level2">
+<h2>convert variables</h2>
+<pre class="r"><code>as.numeric(log)
+as.numeric(cha)
+as.numeric(fac)</code></pre>
+</div>
+<div id="it-works-for-logical-and-factor-variables-but-not-the-character-variables.-it-doesnt-explain-why-we-cant-take-the-mean-of-factors-but-explain-all-other-things" class="section level2">
+<h2>It works for logical and factor variables, but not the character
+variables. It doesn’t explain why we can’t take the mean of factors but
+explain all other things</h2>
 </div>
 
 

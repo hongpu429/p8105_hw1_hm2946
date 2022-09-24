@@ -78,3 +78,10 @@ mean(fac)
 ```
 ## mean works for numeric and logic variables, but not for character and factor variables
 
+## convert variables
+```{r, eval = FALSE}
+as.numeric(log)
+as.numeric(cha)
+as.numeric(fac)
+```
+## It works for logical and factor variables, but not the character variables. It doesn't explain why we can't take the mean of factors but explain all other things
