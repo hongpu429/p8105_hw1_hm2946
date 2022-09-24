@@ -26,3 +26,8 @@ nrow(penguins)
 ncol(penguins)
 ```
 
+## calculate the mean
+```{r}
+mean(penguins$flipper_length_mm,na.rm = TRUE)
+```
+
