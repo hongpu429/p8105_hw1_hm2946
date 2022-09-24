@@ -625,16 +625,37 @@ df</code></pre>
 <pre><code>## # A tibble: 10 × 4
 ##     sample `sample &gt; 0` `&quot;abcdefghij&quot;` `factor(...)`
 ##      &lt;dbl&gt; &lt;lgl&gt;        &lt;chr&gt;          &lt;fct&gt;        
-##  1  0.526  TRUE         abcdefghij     good         
-##  2 -0.745  FALSE        abcdefghij     good         
-##  3  0.0101 TRUE         abcdefghij     good         
-##  4 -0.464  FALSE        abcdefghij     normal       
-##  5  1.22   TRUE         abcdefghij     normal       
-##  6 -0.825  FALSE        abcdefghij     normal       
-##  7  0.136  TRUE         abcdefghij     normal       
-##  8 -0.491  FALSE        abcdefghij     bad          
-##  9 -0.510  FALSE        abcdefghij     bad          
-## 10 -0.438  FALSE        abcdefghij     bad</code></pre>
+##  1 -1.27   FALSE        abcdefghij     good         
+##  2 -0.679  FALSE        abcdefghij     good         
+##  3 -1.75   FALSE        abcdefghij     good         
+##  4  0.949  TRUE         abcdefghij     normal       
+##  5 -0.515  FALSE        abcdefghij     normal       
+##  6 -0.878  FALSE        abcdefghij     normal       
+##  7 -0.905  FALSE        abcdefghij     normal       
+##  8  1.79   TRUE         abcdefghij     bad          
+##  9 -0.825  FALSE        abcdefghij     bad          
+## 10 -0.0218 FALSE        abcdefghij     bad</code></pre>
+</div>
+<div id="calculate-the-mean-1" class="section level2">
+<h2>calculate the mean</h2>
+<pre class="r"><code>num = pull(df,1)
+log = pull(df,2)
+cha = pull(df,3)
+fac = pull(df,4)
+mean(num)</code></pre>
+<pre><code>## [1] -0.4101391</code></pre>
+<pre class="r"><code>mean(log)</code></pre>
+<pre><code>## [1] 0.2</code></pre>
+<pre class="r"><code>mean(cha)</code></pre>
+<pre><code>## Warning in mean.default(cha): 参数不是数值也不是逻辑值：回覆NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>mean(fac)</code></pre>
+<pre><code>## Warning in mean.default(fac): 参数不是数值也不是逻辑值：回覆NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+</div>
+<div id="mean-works-for-numeric-and-logic-variables-but-not-for-character-and-factor-variables" class="section level2">
+<h2>mean works for numeric and logic variables, but not for character
+and factor variables</h2>
 </div>
 
 

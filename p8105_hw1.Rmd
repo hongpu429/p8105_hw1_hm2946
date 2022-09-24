@@ -64,3 +64,17 @@ df = tibble(
 df
 ```
 
+
+## calculate the mean
+```{r}
+num = pull(df,1)
+log = pull(df,2)
+cha = pull(df,3)
+fac = pull(df,4)
+mean(num)
+mean(log)
+mean(cha)
+mean(fac)
+```
+## mean works for numeric and logic variables, but not for character and factor variables
+
